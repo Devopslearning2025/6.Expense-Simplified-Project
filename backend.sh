@@ -2,6 +2,8 @@
 
 source ./common-code.sh
 check_user
+echo "Enter DB password"
+read -s "mysql_password"
 
 dnf module disable nodejs -y &>>$LOGFILE
 VALIDATE $? "Dsiabled nodejs"

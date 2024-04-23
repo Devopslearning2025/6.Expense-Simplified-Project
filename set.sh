@@ -1,7 +1,11 @@
 #!/bin/bash
 set -e
 
-trap '"${LINENO}" "${BASH_COMMAND}"' ERR
+falilure(){
+    echo "Line number: $1 , Command:$2"
+}
+trap '"${LINENO}" "$BASH_COMMAND"' ERR
+
 
 source ./common-code.sh
 check_user

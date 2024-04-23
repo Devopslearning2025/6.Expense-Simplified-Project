@@ -35,7 +35,7 @@ VALIDATE $? "extracted backend.zip is completed"
 npm install &>>$LOGFILE
 VALIDATE $? "npm dependices install completed"
 
-cp /home/ec2-user/Project-Automation/backend.service /etc/systemd/system/backend.service  &>>$LOGFILE
+cp /home/ec2-user/simplified-project/backend.service /etc/systemd/system/backend.service  &>>$LOGFILE
 VALIDATE $? "copied backend.servce"
 
 systemctl daemon-reload  &>>$LOGFILE

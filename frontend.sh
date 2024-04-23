@@ -21,7 +21,7 @@ rm -rf /usr/share/nginx/html/*
 unzip /tmp/frontend.zip &>>$LOGFILE
 VALIDATE $? "Extracting the zip file"
 
-cp /home/ec2-user/Project-Automation/expense.conf /etc/nginx/default.d/expense.conf
+cp /home/ec2-user/simplified-project/expense.conf /etc/nginx/default.d/expense.conf
 
 systemctl restart nginx&>>$LOGFILE
 VALIDATE $? "Restarting the nginx"

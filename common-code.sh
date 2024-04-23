@@ -12,16 +12,6 @@ Y="\e[33m"
 N="\e[0m"
 #echo "starting $SCRIPT_NAME shell script  at $DATE"
 
-check_user(){
-if [ $USERID -ne 0 ]
-then
-    echo "please run with root user"
-    exit 1
-else
-    echo "you are with root user"
-fi
-}
-
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
@@ -30,4 +20,14 @@ VALIDATE(){
     else
         echo -e "$2 is .... $G SUCCESS $N"
     fi        
+}
+
+check_user(){
+if [ $USERID -ne 0 ]
+then
+    echo "please run with root user"
+    exit 1
+else
+    echo "you are with root user"
+fi
 }

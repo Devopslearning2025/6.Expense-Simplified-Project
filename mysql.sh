@@ -6,8 +6,6 @@ check_user
 echo "Enter the DB Password"
 read -s mysql_password
 
-check_user
-
 dnf install mysql-server -y &>>$LOGFILE
 VALIDATE $? "Installing MySQL"
 

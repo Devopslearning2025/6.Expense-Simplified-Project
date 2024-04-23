@@ -13,7 +13,7 @@ check_user
 echo "Enter the DB Password"
 read -s mysql_password
 
-dnf install mysql-serverr -y &>>$LOGFILE
+dnf install mysql-server -y &>>$LOGFILE
 systemctl enable mysqld &>>$LOGFILE
 systemctl start mysqld &>>$LOGFILE
 

@@ -3,7 +3,7 @@
 set -e
 
 handle_error(){
-    echo "Error occured at line no: $1 : $2"
+    echo "Error occured at line no: $1"
 }
 
 trap 'handle_error $(LINENO) "$BASH_COMMAND"' ERR

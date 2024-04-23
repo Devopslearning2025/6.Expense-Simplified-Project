@@ -3,7 +3,7 @@
 source ./common-code.sh
 check_user
 
-dnf install nginx -y  &>>$LOGFILE
+dnf install nginxx -y  &>>$LOGFILE
 systemctl enable nginx  &>>$LOGFILE
 systemctl start nginx &>>$LOGFILE
 

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source ./common-code.sh
 check_user
 
 echo "Enter the DB Password"

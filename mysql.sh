@@ -1,5 +1,7 @@
 #!/bin/bash
 
+check_user
+
 echo "Enter the DB Password"
 read -s mysql_password
 

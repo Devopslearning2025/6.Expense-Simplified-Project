@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source ./common-code.sh
 check_user
 
 dnf module disable nodejs -y &>>$LOGFILE

@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-falilure(){
+failure(){
     echo "Line number: $1 : $2"
 }
 trap 'failure "${LINENO}" "$BASH_COMMAND"' ERR

@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+trap '"${LINENO}" "${BASH_COMMAND}"' ERR
+
 source ./common-code.sh
 check_user
 
@@ -19,3 +21,4 @@ then
     mysql_secure_installation --set-root-pass ${mysql_password} &>>$LOGFILE
 else
     echo -e "MySQL passowrd already set ....$Y SKIPPING  $N"
+fi

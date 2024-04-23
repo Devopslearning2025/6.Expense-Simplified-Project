@@ -6,7 +6,7 @@ handle_error(){
     echo "Error occured at line number: $1, error command: $2"
 }
 
-trap 'handle_error $(LINENO) "$BASH_COMMAND"' ERR
+trap 'handle_error $LINENO "$BASH_COMMAND"' ERR
 
 USERID=$(id -u)
 SCRIPT_NAME=$(echo $0|cut -d '.' -f1)

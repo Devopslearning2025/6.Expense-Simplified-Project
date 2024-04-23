@@ -20,7 +20,7 @@ then
 else
     echo "you are with root user"
 fi
-f
+}
 
 VALIDATE(){
     if [ $1 -ne 0 ]

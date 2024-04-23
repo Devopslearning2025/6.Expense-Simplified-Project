@@ -4,7 +4,7 @@ set -e
 falilure(){
     echo "Line number: $1 : $2"
 }
-trap '"${LINENO}" "$BASH_COMMAND"' ERR
+trap 'failure "${LINENO}" "$BASH_COMMAND"' ERR
 
 
 source ./common-code.sh
